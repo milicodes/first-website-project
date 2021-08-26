@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joe Hisaishi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Chathura:wght@100;300;400;700;800&family=Dhurjati&family=Francois+One&family=Gidugu&family=Iceland&family=Karla:wght@400;500;600;700;800&family=Lato:wght@300;700;900&family=Londrina+Outline&family=Oswald:wght@500;600&family=Poppins:wght@200;300;500;600;700;900&family=Rationale&family=Rozha+One&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        background-size: contain;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/537/original/IMG_1086.PNG?1625714325);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: 1950px;
+        margin: 0 0 0 6rem;
+      }
+
+      nav {
+        display: block;
+        margin: 0 auto;
+      }
+
+      ul {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0.5rem 0 0 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0b090a;
+      }
+
+      a:hover {
+        color: #ffffff;
+      }
+
+      li {
+        display: inline-block;
+        font-family: "Iceland", cursive;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      h1 {
+        z-index: 100;
+        position: absolute;
+        color: #0b090a;
+        font-family: "Gidugu", sans-serif;
+        font-size: 160px;
+        font-weight: 400;
+        text-align: center;
+        margin: 5rem 0 0 11.5rem;
+      }
+      /*Joe Hisaishi name in the left corner*/
+      .japanese-name {
+        margin: 2rem 30.25rem 0 1rem;
+      }
+
+      /*Navigation menu + hover effects*/
+
+      .about {
+        display: inline-block;
+        background-color: #ffffff;
+        border: none;
+        padding: 3.5rem 2.79rem;
+        font-family: "Iceland", cursive;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .about:hover {
+        background-color: #e32629;
+        color: #ffffff;
+        transition: all 280ms ease-out;
+      }
+
+      .music {
+        display: inline-block;
+        background-color: #ffffff;
+        border: none;
+        padding: 3.5rem 2.79rem;
+        font-family: "Iceland", cursive;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .music:hover {
+        background-color: #a4161a;
+        color: #ffffff;
+        transition: all 280ms ease-out;
+      }
+
+      .studio-ghibli {
+        display: inline-block;
+        background-color: #ffffff;
+        border: none;
+        padding: 3.5rem 2.79rem;
+        font-family: "Iceland", cursive;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .studio-ghibli:hover {
+        background-color: #161a1d;
+        color: #ffffff;
+        transition: all 280ms ease-out;
+      }
+
+      .joe-image {
+        position: absolute;
+        padding: 0 0 0 40rem;
+      }
+
+      .photo-joe {
+        z-index: 3;
+        position: absolute;
+        margin: 0 auto;
+        transition: all 400ms ease-in-out;
+      }
+
+      .photo-joe:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .picture-joe {
+        z-index: 1;
+        position: relative;
+      }
+
+      .hisaishi {
+        z-index: 100;
+        position: absolute;
+        color: #ea5d5f;
+        font-family: "Train One", sans-serif;
+        font-size: 130px;
+        font-weight: 400;
+        text-align: center;
+        margin: 16rem 0 0 10.6rem;
+      }
+      /* The Genius Composer text left side - vertical rotated 180deg*/
+      .description {
+        z-index: 100;
+        position: absolute;
+        color: #0b090a;
+        font-family: "Iceland", cursive;
+        font-size: 30px;
+        font-weight: 600;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        transform: rotate(180deg);
+        top: 17rem;
+        left: 3rem;
+      }
+
+      /*Hover me Text*/
+
+      .hover-me {
+        z-index: 100;
+        display: inline-block;
+        margin: 0 auto;
+        position: absolute;
+        color: #0b090a;
+        font-family: "Iceland", cursive;
+        font-size: 30px;
+        font-weight: 600;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        top: 19rem;
+        left: 80rem;
+      }
+
+      .hover-over-parent {
+        position: absolute;
+      }
+
+      .hover-over {
+        z-index: 100;
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        font-family: "Iceland", cursive;
+        writing-mode: vertical-rl;
+        padding: 0 10rem 0 1rem;
+        margin: 39rem 0 0 78rem;
+        color: #0b090a;
+      }
+
+      .hover-over-part {
+        z-index: 100;
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        font-family: "Iceland", cursive;
+        writing-mode: vertical-rl;
+        padding: 0 10rem 0 1rem;
+        margin: 44.8rem 0 0 78rem;
+        color: #0b090a;
+      }
+
+      /*Japanese Names on the side of the tittles*/
+
+      .first-tittle {
+        z-index: 100;
+        display: block;
+        font-size: 60px;
+        position: absolute;
+        text-orientation: upright;
+        line-height: 4rem;
+        padding: 0 10rem 0 1rem;
+        margin: 33rem 0 0 71rem;
+        color: #48ab76;
+      }
+
+      .first-tittle-border {
+        z-index: 100;
+        display: block;
+        font-size: 60px;
+        position: absolute;
+        text-orientation: upright;
+        line-height: 4rem;
+        padding: 0 10rem 0 1rem;
+        margin: 33.12rem 0 0 71.23rem;
+        color: transparent;
+        -webkit-text-stroke: 1.5px #48ab76;
+      }
+
+      .second-tittle {
+        z-index: 100;
+        display: block;
+        font-size: 50px;
+        position: absolute;
+        text-orientation: upright;
+        line-height: 3.5rem;
+        padding: 0 6rem 0 1rem;
+        margin: 59rem 8rem 0 71.2rem;
+        color: #f47c35;
+      }
+
+      .second-tittle-border {
+        z-index: 100;
+        display: block;
+        font-size: 50px;
+        position: absolute;
+        text-orientation: upright;
+        line-height: 3.5rem;
+        padding: 0 6rem 0 1rem;
+        margin: 59.12rem 8rem 0 71.43rem;
+        color: transparent;
+        -webkit-text-stroke: 1.5px #f47c35;
+      }
+
+      .third-tittle {
+        z-index: 100;
+        display: block;
+        font-size: 60px;
+        position: absolute;
+        text-orientation: upright;
+        line-height: 4rem;
+        padding: 0 6rem 0 1rem;
+        margin: 95rem 8rem 0 71.2rem;
+        color: #007cef;
+      }
+
+      .third-tittle-border {
+        z-index: 100;
+        display: block;
+        font-size: 60px;
+        position: absolute;
+        text-orientation: upright;
+        line-height: 4rem;
+        padding: 0 6rem 0 1rem;
+        margin: 95.12rem 8rem 0 71.43rem;
+        color: transparent;
+        -webkit-text-stroke: 1.5px #007cef;
+      }
+
+      /* Button "Get total access" */
+
+      .total-access {
+        background-color: #000000; /* fallback for old browsers */
+        background-color: -webkit-linear-gradient(
+          to left,
+          #434343,
+          #000000
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background-color: linear-gradient(
+          to left,
+          #434343,
+          #000000
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #ffffff;
+        border: none;
+        position: absolute;
+        border-radius: 30px;
+        margin: 28rem 0 0 11rem;
+        padding: 20px 40px 20px 40px;
+        font-size: 18px;
+        transition: all 300ms ease-in-out;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-family: "Assistant", sans-serif;
+        box-shadow: rgba(112, 13, 13, 0.3) 0px 8px 8px 0;
+      }
+
+      .total-access:hover {
+        background-color: #ff4459;
+        color: #ffffff;
+        opacity: 1;
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        margin: 28rem 0 0 11rem;
+        padding: 20px 40px 20px 40px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-family: "Assistant", sans-serif;
+      }
+
+      .quote {
+        display: block;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Rozha One", serif;
+        position: absolute;
+        margin: 40rem 0rem 10rem 25rem;
+        font-size: 35px;
+      }
+
+      /*Masterpieces tittle left side*/
+
+      .masterpieces {
+        z-index: 100;
+        position: absolute;
+        color: #0b090a;
+        font-family: "Iceland", cursive;
+        font-size: 60px;
+        font-weight: 600;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        letter-spacing: normal;
+        top: 75rem;
+        left: 3rem;
+      }
+
+      /*Container of the Masterpieces section*/
+      .parent-masterpieces {
+        margin-top: 33rem;
+      }
+
+      /*Princess Mononoke Images + Gif*/
+
+      .mononoke {
+        display: block;
+        position: absolute;
+        margin: 30rem 0 0 12rem;
+      }
+
+      .round-mononoke {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/623/original/tumblr_ff9914ee83a588283df674f2a7d06288_980c8ac8_1280_%282%29.png?1625863093");
+        border-radius: 50%;
+        background-position-x: center;
+        border: none;
+        margin: 0.35rem 0 0 0;
+        background-repeat: no-repeat;
+        background-size: 400px;
+        padding: 191px;
+        text-align: center;
+        color: transparent;
+        font-family: "Assistant", sans-serif;
+        font-size: 0px;
+        z-index: 3;
+        position: absolute;
+        transition: all 400ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .round-mononoke:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .gif-mononoke {
+        z-index: 1;
+        position: relative;
+        border-radius: 100%;
+        margin: 0.42rem 0 0 0.03rem;
+      }
+
+      /*Text of Mononoke + hover effect*/
+
+      .parent-mononoke {
+        position: absolute;
+        margin: 2rem 0 0 1rem;
+      }
+
+      .text-mononoke {
+        z-index: 3;
+        display: block;
+        position: absolute;
+        margin: 30rem 0 0 38rem;
+        line-height: 50px;
+        font-size: 50px;
+        text-align: left;
+        font-family: "Assistant", sans-serif;
+        padding: 8rem 5rem;
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        border-radius: 20px;
+        color: #ffffff;
+        transition: all 300ms ease-in-out;
+      }
+
+      .text-mononoke:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .about-mononoke {
+        z-index: 1;
+        display: block;
+        position: relative;
+        margin: 30rem 0 0 38rem;
+        line-height: 50px;
+        font-size: 43px;
+        text-align: left;
+        font-family: "Assistant", sans-serif;
+        padding: 3.4rem 1rem;
+        background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+        border-radius: 20px;
+        color: #ffffff;
+      }
+
+      /*Spirited Away images + text*/
+
+      .parent-spirit {
+        position: absolute;
+        margin: 2rem 0 0 1rem;
+      }
+
+      .text-spirit {
+        z-index: 3;
+        display: block;
+        position: absolute;
+        margin: 3rem 0 0 0rem;
+        line-height: 50px;
+        font-size: 50px;
+        text-align: left;
+        font-family: "Assistant", sans-serif;
+        padding: 9.2rem 5rem;
+        background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+        border-radius: 20px;
+        color: #ffffff;
+        transition: all 300ms ease-in-out;
+      }
+
+      .text-spirit:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .about-spirit {
+        z-index: 1;
+        display: block;
+        position: relative;
+        margin: 3rem 0 0 0rem;
+        line-height: 50px;
+        font-size: 40px;
+        text-align: right;
+        font-family: "Assistant", sans-serif;
+        padding: 3rem 2rem;
+        background: #fdc830; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #f37335,
+          #fdc830
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #f37335,
+          #fdc830
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 20px;
+        color: #ffffff;
+      }
+
+      /*Spirited Image + Gif*/
+
+      .spirited-images {
+        display: block;
+        position: absolute;
+        margin: 5rem 0 0 28rem;
+      }
+
+      .round-spirit {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/686/original/spirited_away_%282%29.png?1625962767");
+        border-radius: 50%;
+        background-position-x: center;
+        border: none;
+        margin: 0.35rem 0 0 0;
+        background-repeat: no-repeat;
+        background-size: 400px;
+        padding: 191px;
+        text-align: center;
+        color: transparent;
+        font-family: "Assistant", sans-serif;
+        font-size: 0px;
+        z-index: 3;
+        position: absolute;
+        transition: all 400ms ease-in-out;
+        cursor: pointer;
+      }
+      .round-spirit:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .gif-spirit {
+        z-index: 1;
+        position: relative;
+        border-radius: 100%;
+        margin: 0.42rem 0 0 0.03rem;
+      }
+
+      /*Porco Rosso Images + gif*/
+      .porco {
+        display: block;
+        position: absolute;
+        margin: 34rem 0 0 0rem;
+      }
+
+      .round-porco {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/688/original/porco_%282%29.png?1625963104");
+        border-radius: 50%;
+        background-position-x: center;
+        border: none;
+        margin: 0.35rem 0 0 0;
+        background-repeat: no-repeat;
+        background-size: 400px;
+        padding: 191px;
+        text-align: center;
+        color: transparent;
+        font-family: "Assistant", sans-serif;
+        font-size: 0px;
+        z-index: 3;
+        position: absolute;
+        transition: all 400ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .round-porco:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .gif-porco {
+        z-index: 1;
+        position: relative;
+        border-radius: 100%;
+        margin: 0.42rem 0 0 0.03rem;
+      }
+
+      /*Text of PorcoRosso + hover effect*/
+
+      .parent-porco {
+        position: absolute;
+        margin: 5rem 0 0 0rem;
+      }
+
+      .text-porco {
+        z-index: 3;
+        display: block;
+        position: absolute;
+        margin: 30rem 0 0 28rem;
+        line-height: 50px;
+        font-size: 50px;
+        text-align: left;
+        font-family: "Assistant", sans-serif;
+        padding: 9rem 9.1rem;
+        background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%);
+        border-radius: 20px;
+        color: #ffffff;
+        transition: all 300ms ease-in-out;
+      }
+
+      .text-porco:hover {
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+      }
+
+      .about-porco {
+        z-index: 1;
+        display: block;
+        position: relative;
+        width: max-content;
+        margin: 30rem 0 0 28rem;
+        line-height: 50px;
+        font-size: 43px;
+        text-align: left;
+        font-family: "Assistant", sans-serif;
+        padding: 2.3rem 8rem 3.3rem 2rem;
+        background-image: linear-gradient(to left, #00c6fb 0%, #005bea 100%);
+        border-radius: 20px;
+        color: #ffffff;
+      }
+
+      .footer {
+        display: inline-block;
+        text-align: center;
+        font-family: "Iceland", cursive;
+        font-size: 30px;
+        margin: 123rem 0 0rem 34rem;
+        font-weight: 600;
+        color: #161a1d;
+      }
+
+      .instagram {
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-family: "Iceland", cursive;
+        font-size: 30px;
+        font-weight: 600;
+        color: #161a1d;
+        transition: all 200ms ease-in-out;
+      }
+
+      .instagram:hover {
+        color: #ff4459;
+      }
+
+      .date {
+        text-decoration: none;
+        display: inline-block;
+        margin: 0.5rem 0 6rem 39rem;
+        text-align: center;
+        font-family: "Iceland", cursive;
+        font-size: 25px;
+        font-weight: 600;
+        color: #161a1d;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navigation part buttons-->
+    <div class="content">
+      <header>
+        <nav>
+          <ul>
+            <li class="japanese-name">久石 譲</li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/Joe_Hisaishi"
+                target="_blank"
+              >
+                <button class="about">ABOUT</button></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCxyzciBLt1Hyw06dlqwAIkw"
+                target="_blank"
+              >
+                <button class="music">MUSIC</button></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/Studio_Ghibli"
+                target="_blank"
+              >
+                <button class="studio-ghibli">STUDIO GHIBLI</button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--Image edited in Picsart of Joe-->
+      <div class="joe-image">
+        <img
+          class="photo-joe"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/587/original/8065B699-87BC-4F47-92C0-0386609A39A1.jpeg?1625784902"
+          alt="An Image of Joe Hisaishi"
+          width="500px"
+        />
+        <!--Image reveled by opacity + transition-->
+        <div>
+          <img
+            class="picture-joe"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/599/original/artworks-000486185358-gwuh5w-t500x500_%281%29.jpg?1625811780"
+            alt="A moving image of Joe Hisaishi and Hayao Miyasaki sharing a handshake."
+            width="500px"
+          />
+        </div>
+      </div>
+      <!--Tittles of the webpage-->
+      <container>
+        <article>
+          <h1>J O E</h1>
+          <h2 class="hisaishi">HISAISHI</h2>
+          <h2 class="description">THE GENIUS COMPOSER</h2>
+          <h3 class="hover-me">HOVER OVER</h3>
+          <!--Quote by Joe Hisaishi-->
+          <p class="quote">
+            " Nothing in life is to be feared,<br />
+            it is to be understood. "
+          </p>
+        </article>
+      </container>
+      <!--Main Button with JS-->
+      <div>
+        <button class="total-access">GET TOTAL ACCESS</button>
+      </div>
+      <!--Container of the Masterpieces Section -->
+      <!--Masterpieces tittle - left side-->
+      <container>
+        <article class="parent-masterpieces">
+          <container>
+            <article>
+              <h2 class="masterpieces">MASTERPIECES</h2>
+            </article>
+          </container>
+
+          <!--Japanese Names of the Tittles-->
+          <div>
+            <!--Hover over right side-->
+            <h3 class="hover-over">HOVER</h3>
+            <h3 class="hover-over-part">OVER</h3>
+            <!--Japanese Names-->
+            <h2 class="first-tittle">もののけ姫</h2>
+            <h2 class="first-tittle-border">もののけ姫</h2>
+          </div>
+
+          <div>
+            <h2 class="second-tittle">千と千尋の神隠し</h2>
+            <h2 class="second-tittle-border">千と千尋の神隠し</h2>
+          </div>
+
+          <div>
+            <h2 class="third-tittle">紅の豚</h2>
+            <h2 class="third-tittle-border">紅の豚</h2>
+          </div>
+        </article>
+      </container>
+
+      <!--Princess Mononoke Text-->
+      <container>
+        <article class="parent-mononoke">
+          <h3 class="text-mononoke">THE PRINCESS<br />MONONOKE</h3>
+          <h4 class="about-mononoke">
+            Savage.<br />
+            Mysterious.<br />
+            Grounding.
+            <br />
+            <br />
+            Click the image to listen
+          </h4>
+        </article>
+      </container>
+
+      <!--Princess Mononoke Image + Hover Gif-->
+      <div class="mononoke">
+        <a href="https://www.youtube.com/watch?v=bOKK-kCXvxs" target="_blank">
+          <button class="round-mononoke">Click Me</button></a
+        >
+        <!--Gif-->
+        <img
+          class="gif-mononoke"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/742/original/ValidFearlessGaur-size_restricted_1_.gif?1626042126"
+          alt="A moving image of the Princess Mononoke."
+          width="380px"
+        />
+        <br />
+
+        <!--Spirited Away Image-->
+
+        <div class="spirited-images">
+          <a href="https://youtu.be/TK1Ij_-mank" target="_blank">
+            <button class="round-spirit">Click Me</button></a
+          >
+          <!--Gif-->
+          <img
+            class="gif-spirit"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/687/original/original_1_.gif?1625962998"
+            alt="A moving image of Spirited Away."
+            width="380px"
+          />
+        </div>
+        <!--Spirited Away text-->
+        <container>
+          <article class="parent-spirit">
+            <h3 class="text-spirit">SPIRITED<br />AWAY</h3>
+            <h4 class="about-spirit">
+              Nostalgic.<br />Beautiful.<br />Inspiring.
+              <br />
+              <br />
+              Click the image to listen
+            </h4>
+          </article>
+        </container>
+
+        <!--Porco Rosso Part-->
+        <container>
+          <article class="parent-porco">
+            <h3 class="text-porco">PORCO<br />ROSSO</h3>
+            <h4 class="about-porco">
+              Romantic.<br />
+              Elegant.<br />
+              Soulful.<br />
+              <br />
+              Click the image<br />
+              to listen
+            </h4>
+          </article>
+        </container>
+        <!--Porco Rosso Image + Hover Gif-->
+        <div class="porco">
+          <a href="https://www.youtube.com/watch?v=QsowHW0t7CA" target="_blank">
+            <button class="round-porco">Click Me</button></a
+          >
+          <!--Gif-->
+          <img
+            class="gif-porco"
+            src="https://64.media.tumblr.com/8195c65736a751cd7e706f217cbed9ca/tumblr_mtyin3iFnW1rnvc1co1_250.gifv"
+            alt="A moving image of Porco Rosso."
+            width="380px"
+          />
+          <br />
+        </div>
+      </div>
+
+      <!--Coded by Mili-->
+      <footer>
+        <h3 class="footer">
+          CODED BY
+          <a
+            class="instagram"
+            href="https://www.instagram.com/mili.codes/"
+            target="_blank"
+            >MILI</a
+          >
+          🍣
+        </h3>
+        <h4 class="date">2021</h4>
+      </footer>
+    </div>
+    <!--JavaScript Part-->
+    <script>
+      function nameNull() {
+        if ((name = null)) {
+          quote.innerHTML = `✨Thank you! 💌 <br /> You will get total access!`;
+        }
+      }
+      function getTotalAccess() {
+        let name = prompt(`Hi! Can you tell me your name?👋`);
+        let email = prompt(`And now, what is your email? 📧`);
+        let done = alert(`All done! Scroll down and see the quote! 👇`);
+        
+        let quote = document.querySelector(`p`);
+        quote.innerHTML = `✨Thank you ${name}! 💌 <br /> You will get total access!`;
+      }
+      let totalAccessButton = document.querySelector(`.total-access`);
+      totalAccessButton.addEventListener(`click`, getTotalAccess);
+    </script>
+  </body>
+</html>
